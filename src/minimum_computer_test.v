@@ -1,25 +1,20 @@
-module minimum_computer_test; reg in_1, in_2; wire out; minimum_computer minimum_computer(in_1,
-                                                                                          in_2,
-                                                                                          out);
+/* verilator lint_off STMTDLY */
+
+module minimum_computer_test(output wire [10:0] clock_counter);
+    reg clock; minimum_computer minimum_computer(clock,
+    clock_counter);
     
     initial begin
         $dumpfile("src/minimum_computer_test.vcd");
-        $dumpvars(0, minimum_computer_test);
+        $dumpvars(0);
         
-        in_1 = 0;
-        in_2 = 0;
-        
-        #10;
-        in_1 = 1;
-        in_2 = 0;
-        
-        #10;
-        in_1 = 0;
-        in_2 = 1;
-        
-        #10;
-        in_1 = 1;
-        in_2 = 1;
+        repeat(4096) begin
+            #10;
+            clock = 1;
+            
+            #10;
+            clock = 0;
+        end
         
         #10;
         $finish;
