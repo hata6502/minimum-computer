@@ -1,5 +1,5 @@
 $date
-	Fri Jan 22 03:02:00 2021
+	Sat Jan 23 01:12:04 2021
 $end
 $version
 	Icarus Verilog
@@ -7,10 +7,15 @@ $end
 $timescale
 	1s
 $end
-$scope module index_test $end
+$scope module minimum_computer_test $end
 $var wire 1 ! out $end
 $var reg 1 " in_1 $end
 $var reg 1 # in_2 $end
+$scope module minimum_computer $end
+$var wire 1 " in_1 $end
+$var wire 1 # in_2 $end
+$var wire 1 ! out $end
+$upscope $end
 $upscope $end
 $enddefinitions $end
 #0

@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y iverilog
+      - run: git clone https://github.com/ericsonj/verilog-format.git
+      - run: mkdir /opt/verilog-format
+      - run: unzip verilog-format/bin/verilog-format-LINUX.zip -d /opt/verilog-format
+      - run: find -name "*.v" | xargs -IXXX /opt/verilog-format/verilog-format -f XXX
+      - run: find -name "*.v" | xargs -IXXX git diff --exit-code XXX
+      - run: make
+      - run: bin/minimum_computer_test
+      - run: test $(git diff --numstat src/minimum_computer_test.vcd | awk '{ print $1 + $2 }') == 2
