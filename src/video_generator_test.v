@@ -1,10 +1,10 @@
 /* verilator lint_off STMTDLY */
 
-module minimum_computer_test(output wire luminance,
+module video_generator_test(output wire luminance,
                              output wire sync);
     reg clock;
     
-    minimum_computer minimum_computer(clock, luminance, sync);
+    video_generator video_generator(clock, luminance, sync);
     
     initial begin
         clock = 0;
@@ -17,7 +17,7 @@ module minimum_computer_test(output wire luminance,
             clock = 0;
         end
         
-        $dumpfile("src/minimum_computer_test.vcd");
+        $dumpfile("src/video_generator_test.vcd");
         $dumpvars(1);
         
         // Vertical drawing area start

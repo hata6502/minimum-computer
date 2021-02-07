@@ -17,5 +17,5 @@ jobs:
       - run: find -name "*.v" | xargs -IXXX git diff --exit-code XXX
       - run: find -name "*.v" | xargs verilator --bbox-sys --lint-only -Wall
       - run: make
-      - run: bin/minimum_computer_test
-      - run: test $(git diff --numstat src/minimum_computer_test.vcd | awk '{ print $1 + $2 }') == 2
+      - run: bin/video_generator_test
+      - run: test $(git diff --numstat src/video_generator_test.vcd | awk '{ print $1 + $2 }') == 2

@@ -1,2 +1,2 @@
-minimum_computer_test: src/minimum_computer.v src/minimum_computer_test.v
-	iverilog -o bin/minimum_computer_test src/minimum_computer.v src/minimum_computer_test.v
+video_generator_test: src/video_generator.v src/video_generator_test.v
+	iverilog -o bin/video_generator_test src/video_generator.v src/video_generator_test.v

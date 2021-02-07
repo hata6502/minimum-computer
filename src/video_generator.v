@@ -1,4 +1,4 @@
-module minimum_computer(input wire clock,
+module video_generator(input wire clock,
                         output wire luminance,
                         output wire sync);
     wire is_horizontal_area;
