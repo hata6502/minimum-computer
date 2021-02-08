@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v2
       - run: sudo apt-get update
       - run: sudo apt-get install -y iverilog verilator
-      - run: git clone https://github.com/ericsonj/verilog-format.git /opt/verilog-format
-      - run: unzip /opt/verilog-format/bin/verilog-format-LINUX.zip -d /opt/verilog-format
-      - run: find -name "*.v" | xargs -IXXX /opt/verilog-format/verilog-format -f XXX
-      - run: find -name "*.v" | xargs -IXXX git diff --exit-code XXX
+      - run: wget -P /opt https://github.com/google/verible/releases/download/v0.0-904-gf07e2e8/verible-v0.0-904-gf07e2e8-Ubuntu-18.04-bionic-x86_64.tar.gz
+      - run: tar -zxvf /opt/verible-v0.0-904-gf07e2e8-Ubuntu-18.04-bionic-x86_64.tar.gz -C /opt
+      - run: find -name "*.v" | xargs /opt/verible-v0.0-904-gf07e2e8/bin/verible-verilog-format --inplace
+      - run: find -name "*.v" | xargs git diff --exit-code
       - run: find -name "*.v" | xargs verilator --bbox-sys --lint-only -Wall
       - run: make
       - run: bin/video_generator_test
