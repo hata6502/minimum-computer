@@ -12,7 +12,7 @@
 
 ## Author
 
-👤 **Tomoyuki Hata**
+<img alt="Tomoyuki Hata" src="https://avatars.githubusercontent.com/hata6502" width="48" /> **Tomoyuki Hata <hato6502@gmail.com>**
 
 * Twitter: [@hata6502](https://twitter.com/hata6502)
 * Github: [@hata6502](https://github.com/hata6502)

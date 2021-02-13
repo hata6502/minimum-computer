@@ -15,7 +15,7 @@ jobs:
       - run: tar -zxvf /opt/verible-v0.0-904-gf07e2e8-Ubuntu-18.04-bionic-x86_64.tar.gz -C /opt
       - run: find -name "*.v" | xargs /opt/verible-v0.0-904-gf07e2e8/bin/verible-verilog-format --inplace
       - run: find -name "*.v" | xargs git diff --exit-code
-      - run: find -name "*.v" | xargs verilator --bbox-sys --lint-only -Wall
+      - run: find -name "*.v" | xargs verilator -Wall --bbox-sys --lint-only --top-module minimum_computer
       - run: make
       - run: bin/video_generator_test
       - run: test $(git diff --numstat src/video_generator_test.vcd | awk '{ print $1 + $2 }') == 2
