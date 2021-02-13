@@ -17,7 +17,7 @@ module character_rom_test (
   );
 
   initial begin
-    $dumpfile("src/character_rom_test.vcd");
+    $dumpfile("src/video_generator/character_rom_test.vcd");
     $dumpvars(1);
 
     clock = 0;

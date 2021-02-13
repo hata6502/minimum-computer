@@ -23,7 +23,7 @@ module video_generator_test (
       clock = 0;
     end
 
-    $dumpfile("src/video_generator_test.vcd");
+    $dumpfile("src/video_generator/video_generator_test.vcd");
     $dumpvars(1);
 
     // Vertical drawing area start
