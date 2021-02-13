@@ -12,9 +12,9 @@ module video_generator (
   reg [10:0] clock_counter;
   reg [8:0] line_counter;
 
-  assign is_horizontal_area = clock_counter >= 512 & clock_counter < (1536 + 8 * 8 * 4);
-  assign is_vertical_area   = line_counter >= 32 & line_counter < 232;
-  assign luminance          = is_horizontal_area & is_vertical_area;
+  assign is_horizontal_area = clock_counter >= 384 & clock_counter < (384 + 48 * 32);
+  assign is_vertical_area   = line_counter >= 12 & line_counter < (12 + 240);
+  assign luminance          = is_horizontal_area & is_vertical_area & clock_counter[5];
 
   assign horizontal_sync    = clock_counter < 150;
   assign vertical_sync      = line_counter < 3;
