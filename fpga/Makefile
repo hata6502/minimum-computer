@@ -1,7 +1,7 @@
-all: character_rom_test video_generator_test
+all: character_rom_test mcvideo_test
 
-character_rom_test: src/video_generator/character_rom.v src/video_generator/character_rom_test.v
-	iverilog -o bin/video_generator/character_rom_test src/video_generator/character_rom.v src/video_generator/character_rom_test.v
+character_rom_test: src/mcvideo/character_rom.v src/mcvideo/character_rom_test.v
+	iverilog -o bin/mcvideo/character_rom_test src/mcvideo/character_rom.v src/mcvideo/character_rom_test.v
 
-video_generator_test: src/video_generator/character_rom.v src/video_generator/video_generator.v src/video_generator/video_generator_test.v
-	iverilog -o bin/video_generator/video_generator_test src/video_generator/character_rom.v src/video_generator/video_generator.v src/video_generator/video_generator_test.v
+mcvideo_test: src/mcvideo/character_rom.v src/mcvideo/mcvideo.v src/mcvideo/mcvideo_test.v
+	iverilog -o bin/mcvideo/mcvideo_test src/mcvideo/character_rom.v src/mcvideo/mcvideo.v src/mcvideo/mcvideo_test.v

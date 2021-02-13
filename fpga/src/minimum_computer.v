@@ -7,7 +7,7 @@ module minimum_computer (
   wire luminance;
   wire sync;
 
-  video_generator video_generator (
+  mcvideo mcvideo (
       clk,
       luminance,
       sync

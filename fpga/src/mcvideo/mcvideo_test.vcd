@@ -1,5 +1,5 @@
 $date
-	Sun Feb 14 02:01:27 2021
+	Sun Feb 14 02:41:33 2021
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1s
 $end
-$scope module video_generator_test $end
+$scope module mcvideo_test $end
 $var wire 1 ! sync $end
 $var wire 1 " luminance $end
 $var reg 1 # clock $end

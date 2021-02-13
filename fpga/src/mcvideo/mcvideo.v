@@ -1,4 +1,4 @@
-module video_generator (
+module mcvideo (
     input  wire clock,
     output wire luminance,
     output wire sync

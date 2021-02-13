@@ -22,11 +22,11 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="71"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
     </file>
-    <file xil_pn:name="src/video_generator/video_generator.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/mcvideo/mcvideo.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="72"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
-    <file xil_pn:name="src/video_generator/character_rom.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/mcvideo/character_rom.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="73"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>

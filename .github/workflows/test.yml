@@ -18,9 +18,9 @@ jobs:
       - run: find -name "*.v" | xargs verilator -Wall --bbox-sys --lint-only --top-module minimum_computer
       - run: make
         working-directory: fpga
-      - run: bin/video_generator/character_rom_test
+      - run: bin/mcvideo/character_rom_test
         working-directory: fpga
-      - run: test $(git diff --numstat fpga/src/video_generator/character_rom_test.vcd | awk '{ print $1 + $2 }') == 2
-      - run: bin/video_generator/video_generator_test
+      - run: test $(git diff --numstat fpga/src/mcvideo/character_rom_test.vcd | awk '{ print $1 + $2 }') == 2
+      - run: bin/mcvideo/mcvideo_test
         working-directory: fpga
-      - run: test $(git diff --numstat fpga/src/video_generator/video_generator_test.vcd | awk '{ print $1 + $2 }') == 2
+      - run: test $(git diff --numstat fpga/src/mcvideo/mcvideo_test.vcd | awk '{ print $1 + $2 }') == 2

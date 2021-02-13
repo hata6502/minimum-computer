@@ -1,12 +1,12 @@
 /* verilator lint_off STMTDLY */
 
-module video_generator_test (
+module mcvideo_test (
     output wire luminance,
     output wire sync
 );
   reg clock;
 
-  video_generator video_generator (
+  mcvideo mcvideo (
       clock,
       luminance,
       sync
@@ -23,7 +23,7 @@ module video_generator_test (
       clock = 0;
     end
 
-    $dumpfile("src/video_generator/video_generator_test.vcd");
+    $dumpfile("src/mcvideo/mcvideo_test.vcd");
     $dumpvars(1);
 
     // Vertical drawing area start

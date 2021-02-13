@@ -1,0 +1,19 @@
+{
+  "name": "assembler",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://github.com/hata6502/minimum-computer#readme",
+  "bugs": {
+    "url": "https://github.com/hata6502/minimum-computer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hata6502/minimum-computer.git"
+  },
+  "license": "MIT",
+  "author": "Tomoyuki Hata",
+  "main": "src/index.js",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
