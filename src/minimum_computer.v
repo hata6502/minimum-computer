@@ -15,4 +15,8 @@ module minimum_computer (
 
   assign a[0] = luminance;
   assign a[1] = sync;
+  assign a[15:2] = 0;
+
+  assign b[15:0] = 0;
+  assign c[15:0] = 0;
 endmodule
